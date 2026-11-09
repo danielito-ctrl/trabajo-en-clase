@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda Millonarios | Camisetas oficiales del Embajador</title>
+  <meta name="description" content="Camisetas y uniformes de Millonarios. Elige tu talla y pide por WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#inicio">Tienda <b>Millonarios</b></a>
+    <nav>
+      <a href="#catalogo">Camisetas</a>
+      <a href="#envios">Envíos</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Abrir carrito">
+      Carrito <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <p class="kicker">Temporada 2026</p>
+        <h1>Lleva el azul<br>a todas partes</h1>
+        <p class="lead">Camisetas y uniformes para hinchas del Embajador. Elige tu talla y haz tu pedido por WhatsApp en un minuto.</p>
+        <a class="btn" href="#catalogo">Ver camisetas</a>
+      </div>
+      <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+    </section>
+
+    <section class="catalog" id="catalogo">
+      <div class="section-head">
+        <h2>Camisetas</h2>
+        <div class="filters" id="filters" role="group" aria-label="Filtrar por tipo"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="info" id="envios">
+      <div><h3>Envíos a todo el país</h3><p>Te confirmamos costo y tiempo de entrega por WhatsApp según tu ciudad.</p></div>
+      <div><h3>Pago contra confirmación</h3><p>Acordamos el medio de pago al confirmar tu pedido. Sin pagos en línea.</p></div>
+      <div><h3>Cambio de talla</h3><p>Si no te queda, escríbenos y te ayudamos a cambiarla.</p></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="year"></span> Tienda Millonarios. Tienda de aficionados, no oficial del club.</p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Tu pedido</h2>
+      <button id="closeCart" aria-label="Cerrar carrito">&times;</button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+      <label for="clientName">Tu nombre</label>
+      <input id="clientName" type="text" placeholder="Ej: Camila Rojas" autocomplete="name">
+      <button class="btn wide" id="checkout">Pedir por WhatsApp</button>
+      <p class="small">Se abrirá WhatsApp con tu pedido listo para enviar.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
